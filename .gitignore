@@ -1,0 +1,5 @@
+# Ignorar la carpeta images
+/images
+
+# Ignorar el archivo archivoAlumno
+archivoAlumnos
