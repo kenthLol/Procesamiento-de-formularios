@@ -43,22 +43,22 @@
                                     <div class="form-group col-12 col-md-6">
                                         <label for="nombre">Nombre completo:</label>
                                         <input type="text" class="form-control" id="nombre" name="nombre"
-                                            placeholder="Ingrese su nombre completo" required>
+                                            maxlength="200" placeholder="Ingrese su nombre completo" required>
                                     </div>
                                     <div class="form-group col-12 col-md-6">
                                         <label for="carnet">Número de carnet:</label>
-                                        <input type="text" class="form-control" id="carnet" name="carnet"
+                                        <input type="text" class="form-control" id="carnet" name="carnet" maxlength="10"
                                             placeholder="Ingrese su carnet" required>
                                     </div>
                                     <div class="form-group col-12 col-md-6">
-                                        <label for="edad">Edad:</label>
-                                        <input type="number" class="form-control" id="edad" name="edad"
-                                            placeholder="Edad" required>
+                                        <label for="edad">Edad (entre 15 - 50):</label>
+                                        <input type="number" class="form-control" id="edad" name="edad" min="15"
+                                            max="50" placeholder="Edad" required pattern="[1-4][5-9]|[2-4][0-9]|50">
                                     </div>
                                     <div class="form-group col-12 col-md-6">
-                                        <label for="curso">Curso actual:</label>
-                                        <input type="text" class="form-control" id="curso" name="curso"
-                                            placeholder="Ingrese el curso actual" required>
+                                        <label for="curso">Curso actual (entre 1 - 5):</label>
+                                        <input type="text" class="form-control" id="curso" name="curso" min="1" max="5"
+                                            placeholder="Ingrese el curso actual" required pattern="[1-5]">
                                     </div>
                                     <div class="form-group col-12 col-md-6">
                                         <label for="foto">Foto:</label>
