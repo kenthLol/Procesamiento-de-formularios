@@ -47,23 +47,23 @@
                         </div>
                         <div class="form-group col-12 col-md-6">
                             <label for="nombre">Nombre completo:</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre"
+                            <input type="text" class="form-control" id="nombre" name="nombre" maxlength="200"
                                 value="<?php echo $alumno->nombre; ?>" required>
                         </div>
                         <div class="form-group col-12 col-md-6">
                             <label for="carnet">Número de carnet:</label>
-                            <input type="text" class="form-control" id="carnet" name="carnet"
+                            <input type="text" class="form-control" id="carnet" name="carnet" maxlength="10"
                                 value="<?php echo $alumno->carnet; ?>" readonly>
                         </div>
                         <div class="form-group col-12 col-md-6">
-                            <label for="edad">Edad:</label>
-                            <input type="number" class="form-control" id="edad" name="edad"
-                                value="<?php echo $alumno->edad; ?>" required>
+                            <label for="edad">Edad (entre 15 - 50):</label>
+                            <input type="number" class="form-control" id="edad" name="edad" min="15" max="50"
+                                value="<?php echo $alumno->edad; ?>" required pattern="[1-4][5-9]|[2-4][0-9]|50">
                         </div>
                         <div class="form-group col-12 col-md-6">
-                            <label for="curso">Curso actual:</label>
+                            <label for="curso">Curso actual (entre 1 - 5)</label>
                             <input type="text" class="form-control" id="curso" name="curso"
-                                value="<?php echo $alumno->curso; ?>" required>
+                                value="<?php echo $alumno->curso; ?>" required pattern="[1-5]">
                         </div>
                         <div class="form-group col-12 col-md-6">
                             <label for="foto">Foto:</label>
